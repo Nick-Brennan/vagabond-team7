@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	before_action :logged_in?, only: [:show, :index]
 
 	def index
 		@users = User.all
@@ -13,12 +14,17 @@ class UsersController < ApplicationController
 		if @user != nil
 			redirect_to "/users/#{@user.id}"
 		else
-			redirect_to sign_in_path
+			redirect_to "/sessions/new"
 		end
 	end
 
 	def show
 		@user = User.find(params[:id])
+		if current_user == @user
+			render :show
+		else
+			redirect_to "/sessions/new"
+		end
 	end
 
 	private
