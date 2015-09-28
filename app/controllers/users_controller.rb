@@ -9,8 +9,11 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.find(user_params)
-		redirect_to "/users/#{@user.id}"
+		@user = User.create(user_params)
+		if @user != nil
+			redirect_to "/users/#{@user.id}"
+		else
+			redirect_to sign_in_path
 	end
 
 	def show
