@@ -14,6 +14,7 @@ class UsersController < ApplicationController
 			redirect_to "/users/#{@user.id}"
 		else
 			redirect_to sign_in_path
+		end
 	end
 
 	def show
