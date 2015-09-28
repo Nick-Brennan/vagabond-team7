@@ -1,0 +1,7 @@
+<h1>New Post Form</h1>
+
+<%= form_for @post, url:"/users/#{@user.id}/posts" do |f| %>
+
+<%= f.text_field :title, placeholder: "Title" %>
+<%= f.text_area :content, placeholder: "Post Content" %>
+<%= f.submit "Post" %>
