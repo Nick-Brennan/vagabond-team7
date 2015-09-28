@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post 'sessions', to: 'sessions#create'
   delete 'sessions', to: 'sessions#delete'
 
-  resources :user do
+  resources :users do
   resources :posts
   end
 
