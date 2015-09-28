@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.create(user_params)
-		if @user != nil
+		if @user.id != nil
 			redirect_to "/users/#{@user.id}"
 		else
 			redirect_to sign_in_path
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
 	private
 
 	def user_params
-		params.require(:user).permit(:first_name, :last_name, :email, :password_digest)
+		params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation)
 	end
 
 end
