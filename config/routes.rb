@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
  
   root to: 'welcome#index'
   get 'sessions/new', to: 'sessions#new', as: 'sign_in'
@@ -8,6 +7,6 @@ Rails.application.routes.draw do
 
   resources :user do
   resources :posts
+  end
 
- end
 end
