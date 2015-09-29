@@ -2,7 +2,7 @@ Rails.application.routes.draw do
  
   get 'cities/index'
 
-  get 'cities/show'
+  get 'cities/:id', to: 'cities#show'
 
   root to: 'welcome#index'
   get '/sessions/new', to: 'sessions#new'
