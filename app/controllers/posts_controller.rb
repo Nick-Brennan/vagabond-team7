@@ -1,6 +1,4 @@
 class PostsController < ApplicationController
-    def create
-    end
 
     def new
       @article = Article.new

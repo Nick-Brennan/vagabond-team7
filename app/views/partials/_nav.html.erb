@@ -4,5 +4,5 @@
 <%= link_to 'Logout', sessions_path, method: :delete %>
 <% else %>
 <%= link_to 'Sign Up', new_user_path %>
-<%= link_to 'Login', sign_in_path %>
+<%= link_to 'Login', sessions_new_path %>
 <% end %>
