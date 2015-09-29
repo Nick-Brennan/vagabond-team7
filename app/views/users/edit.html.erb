@@ -3,6 +3,7 @@
 <%= form_for @user, url: "/users/#{@user.id}", method: "put" do  |f| %>
 	<%= f.text_field :first_name%><br>
 	<%= f.text_field :last_name%><br>
+	<%= f.text_field :city_name%><br>
 	
 	<%= f.submit "update profile" %>
 
