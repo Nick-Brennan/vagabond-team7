@@ -1,6 +1,6 @@
 <h1>User Profile</h1>
 
-<p> Welcome, <%=@user.first_name%></p>
+<p> Welcome, <%=@user.first_name%> <%=@user.last_name%></p>
 <ul>
 <% @user.posts.each do |post|%>
 	<li><b><%=post.title%></b>: <%=post.content%></li>
