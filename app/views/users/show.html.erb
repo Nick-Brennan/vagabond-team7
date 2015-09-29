@@ -1,6 +1,9 @@
 <h1>User Profile</h1>
-
+<%= link_to 'Edit Profile', edit_user_path %>
 <p> Welcome, <%=@user.first_name%> <%=@user.last_name%></p>
+<p> Home City: <% id = @user.city_id %> <% if id != nil %>   <% city = City.find(id)%> <%=city.name%> <%=image_tag city.image_url, size: '200x100'%></p> <%end%>
+
+<p> joined on: <%  date = @user.created_at.to_s.split(" ") %> <%= date[0] %></p>
 <ul>
 <% @user.posts.each do |post|%>
 	<li><b><%=post.title%></b>: <%=post.content%></li>
