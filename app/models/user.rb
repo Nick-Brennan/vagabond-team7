@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	attr_accessor :city_name
 	has_secure_password
+	belongs_to :city
 	has_many :posts
 	validates_confirmation_of :password
 	validates :email, :password, presence: true
