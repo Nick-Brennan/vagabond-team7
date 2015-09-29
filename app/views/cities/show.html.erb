@@ -1,3 +1,22 @@
 <h1><%=@city.name%></h1>
 
 <%= image_tag @city.image_url, size: '400x200'%>
+<ul>
+	<%if @city.posts != nil%>
+		<% @city.posts.each do |post|%>
+		<li>
+		<b><%=post.title %>: </b> <%=post.content%>
+		</li>
+		<%end%>
+	<%end%>
+</ul>
+
+<h3> Add A Post about <%= @city.name %> <h3>
+
+<%= form_for @post, url: "/posts/"+ @city.id.to_s, method: "post" do  |f| %>
+	<%= f.text_field :title, :placeholder => "Title" %><br>
+	<%= f.text_field :content, :placeholder => "Add post here" %><br>
+	
+	<%= f.submit "Add post" %>
+
+<% end %>
