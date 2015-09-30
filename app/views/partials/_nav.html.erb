@@ -1,12 +1,26 @@
-<%= link_to "Home", root_path %>
-<% if current_user %>
-<%= link_to 'Profile', user_path(current_user) %>
-<%= link_to 'Cities', cities_index_path %>
-<%= link_to 'Logout', sessions_path, method: :delete %> 
-
-
-<% else %>
-<%= link_to 'Sign Up', new_user_path %>
-<%= link_to 'Login', sessions_new_path %>
-
-<% end %>
+<div class="header_bg" id="home">
+	<div class="container">
+		<div class="row header text-center specials">
+			<div class="h_logo">
+				<a href="index.html"><img src="images/logo.png" alt="" class="responsive"/></a>
+			</div>
+			<nav class="top-nav">
+				<ul class="top-nav nav_list">
+				<% if current_user %>
+					<li><%= link_to "Cities", cities_index_path %></li>
+					<li><%= link_to 'Profile', user_path(current_user) %></li>
+					<li class="logo page-scroll"><a title="hexa" href="index.html"><%=image_tag("logo.png", alt: "", :class => "responsive")%></a></li>
+					<li><%= link_to 'Random', root_path %></li>
+					<li><%= link_to 'Logout', sessions_path, method: :delete %></li>
+				<% else %>
+					<li><%= link_to 'Login', sessions_new_path %></li>
+					<li class="logo page-scroll"><a title="hexa" href="index.html"><%=image_tag("logo.png", alt: "", :class => "responsive")%></a></li>
+					<li><%= link_to 'Sign Up', new_user_path %></li>
+				<% end %>
+				</ul>
+				<a href="#" id="pull"><img src="../images/nav-icon.png" title="menu" /></a>
+			</nav>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
