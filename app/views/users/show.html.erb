@@ -7,6 +7,6 @@
 <p> joined on: <%  date = @user.created_at.to_s.split(" ") %> <%= date[0] %></p>
 <ul>
 <% @user.posts.each do |post|%>
-	<li><b><%=post.title%></b>: <%=post.content%></br>(City: <%= City.find(post.city_id).name %> <%= link_to "Edit", "/posts/" + post.id.to_s %> <%= link_to "Delete", delete_post_path(post), method: "delete", data: {confirm: "Are you sure?"}%></li>
+	<li><b><%=post.title%></b>: <%=post.content%></br>(City: <%= City.find(post.city_id).name %>) <%= link_to "Edit", "/posts/" + post.id.to_s %> <%= link_to "Delete", delete_post_path(post), method: "delete", data: {confirm: "Are you sure?"}%></li>
 <%end%>
 </ul>
