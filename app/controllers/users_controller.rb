@@ -33,13 +33,13 @@ class UsersController < ApplicationController
 
 	def edit
     	@user = User.find(params[:id])
-    	
-  	end
+			@city = @user.city
+  end
 
 	def update
 		user = User.find(params[:id])
-
-		updated_attributes = params.require(:user).permit(:first_name, :last_name, :city_name)
+		updated_attributes = user_params
+		user.update user_params
 		cityName = updated_attributes[:city_name].downcase
 		cityName = cityName.split.map(&:capitalize).join(' ')
 		city = City.find_by_name(cityName)
@@ -55,7 +55,7 @@ class UsersController < ApplicationController
 	private
 
 	def user_params
-		params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :city_name)
+		params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :city_name, :avatar, :avatar_file_name)
 	end
 
 end
