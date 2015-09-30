@@ -26,4 +26,10 @@ class PostsController < ApplicationController
       redirect_to "/users/#{user.id}"
     end
 
+    def destroy
+      user = current_user
+      Post.destroy(params[:id])
+      redirect_to "/users/#{user.id}"
+    end
+
 end
