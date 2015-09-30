@@ -5,7 +5,7 @@
 	<%if @city.posts != nil%>
 		<% @city.posts.each do |post|%>
 		<li>
-		<b><%=post.title %>: </b> <%=post.content%>
+		<b><%=post.title %>: </b> <%=post.content%> <br>(written by: <%= User.find(post.user_id).first_name %>)
 		</li>
 		<%end%>
 	<%end%>
