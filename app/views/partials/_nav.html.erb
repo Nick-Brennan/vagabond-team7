@@ -1,7 +1,7 @@
 <%= link_to "Home", root_path %>
 <% if current_user %>
 <%= link_to 'Profile', user_path(current_user) %>
-
+<%= link_to 'Cities', cities_index_path %>
 <%= link_to 'Logout', sessions_path, method: :delete %> 
 
 
