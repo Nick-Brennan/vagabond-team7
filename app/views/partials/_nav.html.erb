@@ -1,0 +1,23 @@
+<div class="header_bg" id="home">
+	<div class="container">
+		<div class="row header text-center specials">
+			<nav class="top-nav">
+				<ul class="top-nav nav_list">
+				<% if current_user %>
+					<li><%= link_to "Cities", cities_index_path %></li>
+					<li><%= link_to 'Profile', user_path(current_user) %></li>
+					<li class="logo page-scroll"><a title="hexa" href="index.html"><%=image_tag("logo.png", alt: "", :class => "responsive")%></a></li>
+					<li><%= link_to 'Random', root_path %></li>
+					<li><%= link_to 'Logout', sessions_path, method: :delete %></li>
+				<% else %>
+					<li><%= link_to 'Login', sessions_new_path %></li>
+					<li class="logo page-scroll"><a title="hexa" href="index.html"><%=image_tag("logo.png", alt: "", :class => "responsive")%></a></li>
+					<li><%= link_to 'Sign Up', new_user_path %></li>
+				<% end %>
+				</ul>
+				<a href="#" id="pull"><%=image_tag("nav-icon.png", :title => "menu")%></a>
+			</nav>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
