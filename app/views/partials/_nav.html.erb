@@ -1,4 +1,4 @@
-<%= link_to "Home", root_path %>
+<%= link_to "Home", root_path, :"data-no-turbolink" => true%>
 <% if current_user %>
 <%= link_to 'Profile', user_path(current_user) %>
 <%= link_to 'Cities', cities_index_path %>
