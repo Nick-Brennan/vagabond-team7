@@ -1,0 +1,16 @@
+<h1> Edit your profile below: <h1>
+	<%= form_for @user, url: user_path(@user), html: {multipart: true} do |f| %>
+
+	<div class="field">
+		<%= f.label :avatar %><br>
+		<%= f.file_field :avatar %><br>
+		<%= f.label :first_name %><br>
+		<%= f.text_field :first_name %><br>
+		<%= f.label :last_name %><br>
+		<%= f.text_field :last_name %><br>
+		<%= f.label :city_name %><br>
+		<%= f.text_field :city_name, value: @city.name %><br>
+		<%= f.submit %>
+
+	</div>
+<% end %>

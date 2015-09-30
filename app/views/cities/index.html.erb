@@ -1,0 +1,8 @@
+<h1>Cities Index</h1>
+<ul>
+<% @cities.each do |city|%>
+<li>
+<%=city.name%> <%=link_to image_tag(city.image_url, size: '200x100'), city.id.to_s %>
+</li>
+<%end%>
+</ul>
