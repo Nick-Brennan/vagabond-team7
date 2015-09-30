@@ -1,2 +1,47 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="slider_bg"><!-- start slider -->
+  <div class="container">
+    <div class="row slider">
+      <div class="wmuSlider example1">
+        <div class="wmuSliderWrapper">
+          <article style="position: absolute; width: 100%; opacity: 0;"> 
+            <div class="slider_img text-center">
+              <ul class="list-unstyled list_imgs">
+                <%=image_tag("sanfran.png", :class => "responsive")%></li>
+              </ul>
+            </div>
+          </article>
+            <article style="position: relative; width: 100%; opacity: 1;"> 
+              <div class="slider_img text-center">
+                <ul class="list-unstyled list_imgs">
+                  <%=image_tag("newyork.jpg", :class => "responsive")%></li>
+                </ul>
+              </div>
+            </article>
+           </div>
+              <ul class="wmuSliderPagination">
+                    <li><a href="#" class="">0</a></li>
+                    <li><a href="#" class="">1</a></li>
+                </ul>
+            <script src="js/jquery.wmuSlider.js"></script> 
+             <script>
+                 $('.example1').wmuSlider();         
+            </script>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+</div>
+</div>
+<div class="main_bg"  id="about">
+    <div class="container">
+        <div class="row about">
+            <div class="col-md-3 about_img">
+                <%=image_tag("user.png", alt: "", :class => "responsive")%>
+                </div>
+                <div class="col-md-9 about_text">
+                    <h3>Vagabond</h3>
+                    <h4>General Assembly, WDI FALL 2015</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+            </div>
+        </div>
+    </div>
+</div>
