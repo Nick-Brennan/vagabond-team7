@@ -1,7 +1,14 @@
 var map;
 var markers = [];
-var LatLng = { lat: 37.78, lng: -122.44};
-var maparr = [{name: "San Francisco", LatLng:{ lat: 37.78, lng: -122.44}}, {name: "london", LatLng:{ lat: 51.50, lng: 0.12}}, {name: "New York", LatLng:{ lat: 40.71, lng: -74.00}}]
+var LatLng = { lat: 40.00, lng: -30.00};
+var maparr = [{name: "San Francisco", LatLng:{ lat: 37.78, lng: -122.44}},
+	 {name: "london", LatLng:{ lat: 51.50, lng: 0.12}},
+	 {name: "New York", LatLng:{ lat: 40.71, lng: -74.00}},
+	 {name: "Rome", LatLng:{ lat: 41.9, lng: 12.50}},
+	 {name: "Istanbul", LatLng:{ lat: 41.01, lng: 28.95}},
+	 {name: "Austin", LatLng:{ lat: 30.25, lng: -97.75}},
+	 {name: "Gibraltar", LatLng:{ lat: 36.14, lng: 5.35}},
+	 {name: "Vietnam", LatLng:{ lat: 21.03, lng: 105.85}}]
 
 $(document).ready( function (){
 	markerPush(maparr)
@@ -15,7 +22,7 @@ $(document).ready( function (){
 	function getMap () {
 		map = new google.maps.Map(document.getElementById('map-canvas'), {
 			center: LatLng,
-			zoom: 11
+			zoom: 3
 		});
 		console.log("sanity")
 		
