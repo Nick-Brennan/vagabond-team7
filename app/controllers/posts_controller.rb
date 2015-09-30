@@ -14,4 +14,16 @@ class PostsController < ApplicationController
       redirect_to "/cities/#{params[:id]}"
     end
 
+    def edit
+      @post = Post.find(params[:id])
+    end
+
+    def update
+      update_params = params.require(:post).permit(:title, :content)
+      post = Post.find(params[:id])
+      post.update_attributes(update_params)
+      user = current_user
+      redirect_to "/users/#{user.id}"
+    end
+
 end
