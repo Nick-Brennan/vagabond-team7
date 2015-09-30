@@ -4,7 +4,7 @@
 			<nav class="top-nav">
 				<ul class="top-nav nav_list">
 				<% if current_user %>
-					<li><%= link_to "Cities", cities_index_path %></li>
+					<li><%= link_to "Cities", cities_index_path, :"data-no-turbolink" => true %></li>
 					<li><%= link_to 'Profile', user_path(current_user) %></li>
 					<li class="logo page-scroll"><a title="hexa" href="index.html"><%=image_tag("logo.png", alt: "", :class => "responsive")%></a></li>
 					<li><%= link_to 'Random', root_path %></li>
