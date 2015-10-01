@@ -1,11 +1,30 @@
-<h1>User Profile</h1>
-<%= link_to 'Edit Profile', edit_user_path %>
-<%= image_tag @user.avatar.url(:thumb) %>
-<p> Welcome, <%=@user.first_name%> <%=@user.last_name%></p>
-<p> Home City: <% id = @user.city_id %> <% if id != nil %>   <% city = City.find(id)%> <%=city.name%> <%=link_to image_tag(city.image_url, size: '200x100'), root_path + "cities/" + city.id.to_s %></p> <%end%>
-
+<br>
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+      <%= image_tag @user.avatar.url(:thumb), size: "150x150" %>
+        <h1><%=@user.first_name%> <%=@user.last_name%>
+          <p class="lead"><% id = @user.city_id %> <% if id != nil %>   <% city = City.find(id)%> <%=city.name%></p>
+        	<%end%>
+        </h1>
+        	<%= link_to 'Edit Profile', edit_user_path %>
+      </div>
+      <div class="col-md-5">
+        <div class="well well-lg"> 
+          <div class="row">
+            <div class="col-sm-15">
+              <% id = @user.city_id %> <% if id != nil %>   <% city = City.find(id)%><%=image_tag(city.image_url, size: '600x200') %>	<%end%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div><!-- /cont -->
 <div class="blog">
 	<div class="container">
+		<div class="b_left pull-right">
+		</div>
  		<div class="main row">
 			<div class="col-md">
 				<h2 class="style"> RECENT POSTS</h2>
@@ -22,9 +41,7 @@
 					</div>
 					<div class="clearfix"></div>
 						<p class="para"><%=post.content%></p>
-					</div>
-					<div class="b_left pull-right">
-					<%= link_to "Edit", "/posts/" + post.id.to_s %> <%= link_to "Delete", delete_post_path(post), method: "delete", data: {confirm: "Are you sure?"}%>
+						<button class="btn btn-default"><%= link_to "Edit", "/posts/" + post.id.to_s %></button> <button class="btn btn-default"><%= link_to "Delete", delete_post_path(post), method: "delete", data: {confirm: "Are you sure?"}%></button>
 					</div><hr>
 					<%end%>
 			</div>
@@ -32,3 +49,7 @@
 			<div class="clearfix"></div>
 	</div>
 </div>
+
+
+
+
