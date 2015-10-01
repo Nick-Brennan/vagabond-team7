@@ -5,14 +5,15 @@
 	<div class="container">
  		<div class="main row">
 			<div class="col-md">
-				<h2 class="style"><%=@city.name%><span class="b_left pull-right" data-toggle="modal" data-target="#myModal">Add Post</span></h2>
+				<h2 class="style"><%=@city.name%><span class="b_left pull-right postBtn" data-toggle="modal" data-target="#myModal">Add Post</span></h2>
 					<div class="blog_main">
 						<%if @city.posts != nil%>
+						<ul class="list-unstyled">
 						<% @city.posts.each do |post|%>
-					<h4><%=post.title %></h4>
+					<li><h4><%=post.title %></h4>
 					<div class="blog_list pull-left">
-					  <ul class="list-unstyled">
-							<li><span>Author: <%= User.find(post.user_id).first_name%></span></li>
+					 
+							<span>Author: <%= User.find(post.user_id).first_name%></span>
 					  </ul>
 					</div>
 					<div class="b_left pull-right">
@@ -24,9 +25,9 @@
 						<% if post.keywords != nil%>
 							<em class="para"><%=post.keywords%></em>
 						<%end%>
-					</div>
-						<%end%>
-						<%end%>
+					
+						<%end%></li>
+						<%end%> </ul></div>
 			</div>
 		</div>
 			<div class="clearfix"></div>
