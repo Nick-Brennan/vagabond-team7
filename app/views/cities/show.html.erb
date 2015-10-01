@@ -43,7 +43,7 @@
         <div class="modal-body">
 					<%= form_for @post, url: "/posts/"+ @city.id.to_s, method: "post" do  |f| %>
 						<%= f.text_field :title, :placeholder => "Title" %><br>
-						<%= f.text_field :content, :placeholder => "Add post here" %><br>
+						<%= f.text_area :content, :placeholder => "Add post here" %><br>
 						<%= f.submit "Add post" %>
 					<% end %>
         </div>

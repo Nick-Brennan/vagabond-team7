@@ -1,16 +1,21 @@
-<h1> Edit your profile below: <h1>
-	<%= form_for @user, url: user_path(@user), html: {multipart: true} do |f| %>
+<div class="container"><br>
+  <center><h3 class='edit_p'> Edit Profile</h3></center>
+  <div class="content-right">
+    <div class="grid1">
+      <div class="form-sec">
+      	<%= form_for @user, url: user_path(@user), html: {multipart: true} do |f| %>
+        <form>
+          <%= f.text_field :first_name, :class => "user" %>
+          <%= f.text_field :last_name, :class => "user" %>
+          <%= f.select :city_name, [ 'Austin', 'Gibraltar', 'Hue', 'Istanbul', 'London', 'New York','Rome','San Francisco'], :prompt => @city.name %>
+          <br>
+          <div> Profile Picture:</div>
+        	<%= f.file_field :avatar %><br>
+          <%= f.submit "Update!" %>
+          <% end %>
+        </form>              
+      </div>        
+    </div>
+  </div>
+</div>
 
-	<div class="field">
-		<%= f.label :avatar %><br>
-		<%= f.file_field :avatar %><br>
-		<%= f.label :first_name %><br>
-		<%= f.text_field :first_name %><br>
-		<%= f.label :last_name %><br>
-		<%= f.text_field :last_name %><br>
-		<%= f.label :city_name %><br>
-		<%= f.text_field :city_name, value: @city.name %><br>
-		<%= f.submit %>
-
-	</div>
-<% end %>
