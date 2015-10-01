@@ -76,7 +76,7 @@ margin: 0 auto;
     color: #b4b4b4;
     padding: 15px 10px 15px 45px;
     border: 1px solid #ccc;
-    width: 85%;
+    width: 100%;
     margin: 0em 0em 1.5em 0em;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -90,7 +90,7 @@ margin: 0 auto;
     color: #b4b4b4;
     padding: 15px 10px 15px 15px;
     border: 1px solid #ccc;
-    width: 93%;
+    width: 100%;
 	background:transparent;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -106,7 +106,7 @@ margin: 0 auto;
     color: #b4b4b4;
     padding: 15px 10px 15px 45px;
     border: 1px solid #ccc;
-    width: 85%;
+    width: 100%;
     margin: 0em 0em 1.5em 0em;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -145,10 +145,30 @@ select {
 	
 }
 .form-sec{
-	position:relative;
-	box-shadow:0 0 8px #686868;
-	 border-radius: 3px;
+    box-shadow:0 0 8px #2EB398;
+    border-radius: 3px;
+   position: absolute;
+   margin: auto;
+   top: 50px;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   width: 400px;
+   height: 500px;
 }
+.form-sec2{
+    box-shadow:0 0 8px #2EB398;
+    border-radius: 3px;
+   position: absolute;
+   margin: auto;
+   top: 50px;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   width: 400px;
+   height: 500px;
+}
+
 .form-sec form span{
 	position:absolute;
 	 right:10%;
