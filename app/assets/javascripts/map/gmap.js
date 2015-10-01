@@ -43,6 +43,9 @@ function markerPush(arr) {
 		google.maps.event.addListener(marker, 'mouseover', function() {
 			info.open(map,marker);
 		});
+		google.maps.event.addListener(marker, 'mouseout', function() {
+			info.close(map,marker);
+		});
 		google.maps.event.addListener(marker, 'click', function() {
 			window.location.href =  marker.url;
 		});
