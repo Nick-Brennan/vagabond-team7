@@ -20,6 +20,10 @@
 					</div>
 					<div class="clearfix"></div>
 						<p class="para"><%=post.content%></p><hr>
+						<% post.get_keywords%>
+						<% if post.keywords != nil%>
+							<em class="para"><%=post.keywords%></em>
+						<%end%>
 					</div>
 						<%end%>
 						<%end%>
