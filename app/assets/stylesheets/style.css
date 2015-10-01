@@ -82,7 +82,7 @@ nav a#pull {
 }
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 768px) {
-	nav { 
+	nav {
   		height: auto;
   	}
   	nav ul {
@@ -101,7 +101,7 @@ nav a#pull {
 	}
 	nav li:last-child a {
 		border-bottom: 1px solid #242424;
-		margin-bottom: 20px;		
+		margin-bottom: 20px;
 	}
 
   	nav a {
@@ -112,7 +112,9 @@ nav a#pull {
 }
 /* start slider */
 .slider_bg{
-	background: #ffffff;
+	background: #323232;
+  background-size: cover;
+  widows: 100%;
 }
 .list_imgs li{
 	display: block;
@@ -131,10 +133,8 @@ nav a#pull {
 	height: 100%;
 }
 .wmuSlider .wmuSliderWrapper article img {
-	max-width: 100%;
-	width: auto;
-	height: auto;
-	display:block;
+	width: 100%;
+  height: 100%;
 }
 .wmuSliderPagination {
 	z-index: 2;
@@ -171,7 +171,7 @@ nav a#pull {
 	text-align: center;
 }
 .slider_text h2{
-	font-family: 'open_sansregular'; 
+	font-family: 'open_sansregular';
 	text-transform: uppercase;
 	color: #202020;
 	font-size: 3em;
@@ -247,7 +247,7 @@ nav a#pull {
 .soc_icons ul li a i{
 	line-height: 52px;
 	width: 52px;
-	height: 52px;	
+	height: 52px;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -317,7 +317,7 @@ nav a#pull {
 	height: 160px;
 }
 .contact_left form input[type="text"]:focus,.contact_left form textarea:focus{
-	border: 1px solid #2EB398;	
+	border: 1px solid #2EB398;
 }
 .contact_left form input[type="text"]:hover,.contact_left form textarea:hover{
 	border-color: #2EB398;
@@ -537,7 +537,7 @@ h2.style{
 }
 .b_left a:hover{
 	color: #2EB398;
-	text-decoration: none;	
+	text-decoration: none;
 }
 /* start read_more */
 .read_more{
@@ -651,7 +651,7 @@ h2.style{
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;	
+	transition: all 0.3s ease-in-out;
 }
 .social_network_likes li a p{
 	padding:10px 0 5px;
@@ -701,7 +701,7 @@ h2.style{
 	width:45px;
 	height:45px;
 	display:block;
-	background:url(../images/social-icons.png) no-repeat;	
+	background:url(../images/social-icons.png) no-repeat;
 	margin:0 auto;
 }
 .social_network i.twitter-icon{
