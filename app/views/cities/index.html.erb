@@ -15,7 +15,7 @@
 						<a><%=image_tag(city.image_url, :class => "img-responsive")%></a>
 					</div>
 					 <h3><a><%=link_to city.name%></a></h3>
-					 <p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+					 <p class="para"><%= city.description%></p>
 					 <button type="button" class="btn btn-default"><%=link_to "View Posts", city.id.to_s%></button><hr>
 				</div>
 				<%end%>
