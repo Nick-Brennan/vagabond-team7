@@ -14,7 +14,7 @@
 	 	 	<% @cities.each do |city|%>
 				<div class="col-md-3 images_1_of_4">
 					<div class="fancyDemo">
-						<a><%=image_tag(city.image_url, :class => "img-responsive")%></a>
+						<a><%= link_to image_tag(city.image_url, :class => "img-responsive"), city.id.to_s%></a>
 					</div>
 					 <h3><a><%=link_to city.name%></a></h3>
 					 	<p class="para"><%= city.description%></p>
