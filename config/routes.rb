@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   post '/sessions', to: 'sessions#create'
   post '/posts/:id', to: 'posts#create'
   patch '/posts/:id', to: 'posts#update'
+  delete '/posts/:id', to: 'posts#destroy', as: 'delete_post'
   delete '/sessions', to: "sessions#destroy"
 
   resources :users do
