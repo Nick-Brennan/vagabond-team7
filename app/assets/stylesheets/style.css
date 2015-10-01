@@ -13,6 +13,10 @@ body {
 	background:#ffffff;
 	font-size: 100%;
 }
+.well.well-lg {
+    padding: 1px;
+    border-radius: 0px;
+}
 /* start header */
 .header_bg{
 	background: #323232;
