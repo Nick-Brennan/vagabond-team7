@@ -1,7 +1,15 @@
-<h1> Sign In! <h1>
-
-<%= form_for @user, url: '/sessions', method: "post" do |f| %>
-	<%= f.text_field :email, placeholder: "Email" %>
-	<%= f.password_field :password, placeholder: "Password" %>
-	<%= f.submit "Sign In"%>
-<%end%>
+<div class="container">
+  <div class="content-right">
+    <div class="grid1">
+      <div class="form-sec">
+        <%= form_for @user, url: '/sessions', method: "post" do |f| %>
+        <form>
+          <%= f.text_field :email, :class => "mail", placeholder: "Email" %>
+          <%= f.password_field :password, :class => "lock", placeholder: "Password" %>
+          <%= f.submit "Log In!" %>
+          <% end %>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

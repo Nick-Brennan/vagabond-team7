@@ -1,25 +1,27 @@
 <br>
 <% content_for :head do %>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg"></script>
 <%end%>
+<div class="container">
 <div id="map-container">
   <div id="map-canvas"></div>
 </div>
+</div>
 <div class="container">
 	<div class="main row">
- 	 	<h2 class="style">LIST OF CITIES</h2>
-	 	 <div class="grids_of_4 row">
-	 	 <% @cities.each do |city|%>
+ 	<h2 class="style">LIST OF CITIES</h2>
+	 	<div class="grids_of_4 row">
+	 	 	<% @cities.each do |city|%>
 				<div class="col-md-3 images_1_of_4">
 					<div class="fancyDemo">
 						<a><%=image_tag(city.image_url, :class => "img-responsive")%></a>
 					</div>
 					 <h3><a><%=link_to city.name%></a></h3>
-					 <p class="para"><%= city.description%></p>
+					 	<p class="para"><%= city.description%></p>
 					 <button type="button" class="btn btn-default"><%=link_to "View Posts", city.id.to_s%></button><hr>
 				</div>
-				<%end%>
-				<div class="clear"></div>
-			</div>
+			<%end%>
+			<div class="clear"></div>
+		</div>
 	</div>
 </div>
