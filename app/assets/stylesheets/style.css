@@ -17,6 +17,9 @@ body {
     padding: 1px;
     border-radius: 0px;
 }
+h3.edit_p {
+    margin-top: 50px;
+}
 /* start header */
 .header_bg{
 	background: #323232;
