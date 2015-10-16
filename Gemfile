@@ -50,3 +50,7 @@ group :development do
 
   gem "paperclip", "~> 4.3"
 end
+
+group :production do
+  gem 'rails_12factor', '0.0.2'
+end
