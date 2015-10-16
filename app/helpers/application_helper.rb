@@ -1,5 +1,5 @@
 module ApplicationHelper
-  require 'Date'
+  require 'date'
   def timeago(time)
     p "What's the time? - " + (Time.now - time).to_s
     time_ago = ((Time.now - time) / 86400) # returns a number in days
