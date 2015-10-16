@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
     res = Typhoeus.get(
       @@alchemy_url,
       params: {
-        apikey: '5b856d832f158ea06ea555404bf293cb1b0352e4',
+        apikey: ENV['API_KEY'],
         text: content,
         maxRetrieve: 10,
         sentiment: 0,

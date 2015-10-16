@@ -31,6 +31,9 @@ gem 'bcrypt', '~> 3.1.7'
 #typhoeus
 gem 'typhoeus'
 
+#dotenv for keys
+gem 'dotenv-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :development, :test do

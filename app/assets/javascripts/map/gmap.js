@@ -36,7 +36,7 @@ function markerPush(arr) {
 		var marker = new google.maps.Marker({
 			position: el.LatLng,
 			map: map,
-			url: "http://localhost:3000/cities/" + link,
+			url: "/cities/" + link,
 			title: el.name
 		})
 		var info = createInfoWindow(el.description);
