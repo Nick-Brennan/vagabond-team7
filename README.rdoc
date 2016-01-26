@@ -1,7 +1,7 @@
-#Vagabond
-##Vagabond is Rails Travel Blogging App
+# Vagabond
+## Vagabond is Rails Travel Blogging App
 
-###Technologies Used:
+### Technologies Used:
 -Ruby on Rails
 -Google Maps API
 -IBM Alchemy API
