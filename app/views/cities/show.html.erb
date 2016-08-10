@@ -20,7 +20,7 @@
 						<span><%=timeago(post.created_at)%></span>
 					</div>
 					<div class="clearfix"></div>
-						<p class="para"><%=post.content%></p><hr>
+						<p class="para"><%=simple_format(post.content)%></p><hr>
 						<% post.get_keywords%>
 						<% if post.keywords != nil%>
 							<em class="para"><%=post.keywords%></em>

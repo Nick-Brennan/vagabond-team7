@@ -32,20 +32,21 @@
 						<ul class="list-unstyled">
 						<% @user.posts.each do |post|%>
 						<li><h4><%=post.title%></h4>
-					<div class="blog_list pull-left">
-					  
-							<span>City: <%= City.find(post.city_id).name %></span>
-					  
-					</div>
-					<div class="b_left pull-right">
-						<span><%=timeago(post.created_at)%></span>
-					</div>
-					<div class="clearfix"></div>
-					<div>
-						<p class="para"><%=post.content%></p>
-						<button class="btn btn-default"><%= link_to "Edit", "/posts/" + post.id.to_s %></button> <button class="btn btn-default"><%= link_to "Delete", delete_post_path(post), method: "delete", data: {confirm: "Are you sure?"}%></button></div>
-					<hr></li>
-					<%end%></ul></div>
+							<div class="blog_list pull-left">
+							  
+									<span>City: <%= City.find(post.city_id).name %></span>
+							  
+							</div>
+							<div class="b_left pull-right">
+								<span><%=timeago(post.created_at)%></span>
+							</div>
+							<div class="clearfix"></div>
+							<div>
+							<p class="para"><%=post.content%></p>
+							<button class="btn btn-default"><%= link_to "Edit", "/posts/" + post.id.to_s %></button> <button class="btn btn-default"><%= link_to "Delete", delete_post_path(post), method: "delete", data: {confirm: "Are you sure?"}%></button></div>
+						<hr></li>
+						<%end%>
+						</ul></div>
 			</div>
 		</div>
 			<div class="clearfix"></div>
